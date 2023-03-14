@@ -68,11 +68,10 @@ int main(){
     float x = 4.5;
     cout << (int)x << endl;
     cout << 20 + (int)30.4;
-    */
+    *//*
     int likes = 0;
     ++likes; // pre_increment
     likes++; // post_increment
-
-
+    */
     return 0;
 }

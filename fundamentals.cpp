@@ -2,8 +2,6 @@
 #include <typeinfo>
 using namespace std;
 // #define days 9
-// using bignum = long long int;
-// typedef long long int LLI;
 int main(){
     /*
     cout<<"this line has been printed with cout";
@@ -43,8 +41,8 @@ int main(){
     cout << int(letter) <<endl;
     cout << char(65) <<endl;
     *//*
-    cout << "what is it that you want to convert? 'i' for int 'c' for char:   ";
     char input;
+    cout << "what is it that you want to convert? 'i' for int 'c' for char:   ";
     cin >> input;
     if(input == 'i'){
         int num;
@@ -55,23 +53,39 @@ int main(){
         cout << "enter the character that you want to convert:  ";
         char ch;
         cin >>ch;
-        cout << "your character has been converted to:  "<<int(ch);
+        cout << "The ASCII Number of Your Char is:  "<<int(ch);
     }else{cout <<"invalid input";}
     *//*
+    using bignum = long long int;
     bignum big = 68567836285689234;
-    cout << big;
+    cout << big << endl;
+    typedef long long LL;
+    LL num = 99768972304957968;
+    cout << num <<endl;
     *//*
+    //TYPE CASTING: Implicit Conversion
     double a = 4.4; 
-    int b = a; // Compiler Will Convert Double To Int Then Assign
+    int b = a;             // Compiler Will Convert a To an INT Then Assign
+
+    char c = 'C';
+    int b = 20;
+    cout <<  b + c <<endl; //Compiler will convert 'C' To 67 Then Operates
+
+    int e = 20;
+    double f = 20.5;
+    cout << e + f <<endl;  //Compiler Will Convert e To Double Then Operates
     *//*
-    //TYPE CASTING
+    //TYPE CASTING: Explicit Convertion 
     float x = 4.5;
-    cout << (int)x << endl;
-    cout << 20 + (int)30.4;
+    cout << (int)x << endl;        //Output ==> 4
+    cout << int(20.5) + (int)30.4; //Output ==> 50
     *//*
-    int likes = 0;
-    ++likes; // pre_increment
-    likes++; // post_increment
-    */
+    //Pre/Post Increment/Decrement
+    int likes1,likes2;
+    likes1 = likes2 = 0;
+    cout << likes1++ <<endl; // Output: 0, likes=1, Post Increment
+    cout << ++likes2 <<endl; // Output: 1, likes=1, Pre Increment
+    /*
+    
     return 0;
 }

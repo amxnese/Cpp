@@ -1,5 +1,6 @@
 #include <iostream>
 #include <typeinfo>
+#include <array>
 using namespace std;
 // #define days 9
 int main(){
@@ -144,7 +145,95 @@ int main(){
     msg2 = (rank < 5)? "Ok By Rank":(points > 100)?"Ok By Points":"Failed";
     cout << msg2 << endl;
 
-    */
+    *//*
+
+    //SWITCH
+    int Day;
+    do{
+        cout << "Chose a number From 1 To 7:  "<< endl;
+        cin >> Day;
+    }while(Day < 1 || Day >7);
+    switch(Day){
+        case 1:cout << "Monday" <<endl;   break;
+        case 2:cout << "Tuesday" <<endl;  break;
+        case 3:cout << "Wednesday" <<endl;break;
+        case 4:cout << "Thursday" <<endl; break;
+        case 5:cout << "Friday" <<endl;   break;
+        case 6:cout << "Saturday" <<endl; break;
+        case 7:cout << "Sunday" <<endl;   break;
+        default: cout <<"invalid";//Not Necessary Because of The Do While Loop
+    }
+
+    *//*
+
+    //ARRAYS
+    int nums[] = {1,2,3};
+    cout << "Element 1: "<< nums[0]<<endl;
+    cout << "Element 2: "<< nums[1]<<endl;
+    cout << "Element 3: "<< nums[2]<<endl;
+
+    cout <<"Location: "<<&nums[0]<<endl;
+    cout <<"Location: "<<&nums[1]<<endl;
+    cout <<"Location: "<<&nums[2]<<endl;
     
+    
+    nums[0] = 4;
+    nums[1] = 5;
+    nums[2] = 6;
+    cout << "Element 1: "<< nums[0] <<endl;
+    cout << "Element 2: "<< nums[1] <<endl;
+    cout << "Element 3: "<< nums[2] <<endl;
+
+    int sizeArr = sizeof(nums)/sizeof(nums[0]); // 12 / 4 = 3
+    cout << sizeArr <<endl;
+
+    *//*
+
+    //Two Dimensional Array
+
+    int arr1[3] = {1,2,3};
+    int arr2[3] = {4,5,6};
+    int arr3[3] = {7,8,9};
+
+    int arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    cout <<"row 1 column 2 has:  " <<arr[0][1]<<endl; // 2
+    cout <<"row 2 column 3 has:  " <<arr[1][2]<<endl; // 6
+    cout <<"row 3 column 1 has:  " <<arr[2][0]<<endl; // 7
+
+    */
+
+    //Class Array
+    /*We Use Class Array Because There Are Some Safety Threats
+    That comes From Using The Normal C-Style Array.
+    Syntax: Template<Type, Size> Identifier*/
+    array<int, 9> numbers = {1,2,3,4,5,6,7,8,9};
+    cout << numbers[0]<< endl;
+    cout << numbers[4]<< endl;
+    cout << numbers[7]<< endl;
+
+    //size() Function: Returns The Number Of Elements In The Array
+    cout << "Number Of Elements:  "<< numbers.size()<< endl;
+
+
+    //front() Function: Returns The First Element in Array
+    cout << numbers.front()<< endl; //numbers[0]
+
+    //back() Function: Returns The Last Element in Array
+    cout << numbers.back()<< endl; //numbers[-1]
+
+    //at(index) Function: Returns The numbre 'index' Element in Array
+    cout << numbers.at(4)<< endl; //numbers[index]
+
+    //empty() Function: Checks if An Array is Empty
+    cout <<numbers.empty()<< endl; // 0 ==> False
+
+    //fill(value) Function: Sets All The Elements To a Specific Value
+    numbers.fill(0);
+    cout << numbers[0]<< endl; // 0
+    cout << numbers[4]<< endl; // 0
+
+    
+
     return 0;
+
 }

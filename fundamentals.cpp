@@ -1,6 +1,7 @@
 #include <iostream>
 #include <typeinfo>
 #include <array>
+#include <string.h>
 using namespace std;
 // #define days 9
 int main(){
@@ -200,12 +201,14 @@ int main(){
     cout <<"row 2 column 3 has:  " <<arr[1][2]<<endl; // 6
     cout <<"row 3 column 1 has:  " <<arr[2][0]<<endl; // 7
 
-    */
+    *//*
 
     //Class Array
-    /*We Use Class Array Because There Are Some Safety Threats
-    That comes From Using The Normal C-Style Array.
-    Syntax: Template<Type, Size> Identifier*/
+
+    // We Use Class Array Because There Are Some Safety Threats
+    // That comes From Using The Normal C-Style Array.
+    // Syntax: Template<Type, Size> Identifier
+
     array<int, 9> numbers = {1,2,3,4,5,6,7,8,9};
     cout << numbers[0]<< endl;
     cout << numbers[4]<< endl;
@@ -232,8 +235,84 @@ int main(){
     cout << numbers[0]<< endl; // 0
     cout << numbers[4]<< endl; // 0
 
-    
+    *//*
 
-    return 0;
+    //STRINGS
 
+    //C-Style String
+    char name1[5] = "amin"; //name[4] == \0 ==> NULL
+
+    char name2[5] = {'a','m','i','n','\0'};
+
+    //String Class
+    string name3 = "amin";
+    cout << name1 << "\n" << name2 << "\n" << name3 << endl;
+
+    *//*
+
+    //CONCATENATING
+
+    //C Style
+    char fname1[] ="jon ";
+    char lname1[] ="snow";
+    cout << fname1 << lname1 << endl;
+    cout << strcat(fname1,lname1) << endl;
+
+    //String Style
+    string fname2 = "jon ";
+    string lname2 = "snow";
+    cout << fname2 + lname2 << endl;
+    cout << fname2.append(lname2) << endl;
+
+    *//*
+
+    //For Loop
+
+    for (int index = 0; index < 11; index++){
+        if (index % 2 == 0)
+            cout << index << " is even"<< endl;
+        else
+            cout << index << " is odd"<< endl;
+    }
+
+    int nums[2][4] ={{1,2,3,4},
+                    {5,6,7,8},
+                    };
+    for (int i = 0;i<2;i++)
+    {
+        for (int n = 0;n<4;n++)
+        {
+            cout << nums[i][n] << endl;
+        }
+    }
+
+    *//*
+
+    //While and Do While Loops 
+
+    //Don't Forget To Include The <cstdlib> Library
+    int secret_num = 1 + rand()%10;
+    int number_given;
+    int guess_count = 3;
+    cout << "guess a number from 1 to 10:   " ;
+    do{
+        cin >> number_given;
+        }while(number_given < 0 || number_given > 10);
+    while (number_given != secret_num){
+        cout << "Wrong Guess,You Have "<<guess_count--<<" Tries Left:  ";
+        cin >> number_given;
+        if (guess_count == 0){
+            cout << "You're Out Of Guesses.. The Number is: "<<secret_num;
+            break;
+        }
+        if (number_given == secret_num){
+            cout << "Correct!!!";
+            break;
+        }
+    }
+
+    */
+    for(int i=0;i<16;i++){
+        cout<<(i)/2;
+    }
 }

@@ -3,7 +3,7 @@
 #include <array>
 #include <string.h>
 using namespace std;
-// #define days 9
+
 int main(){
     /*
     cout<<"this line has been printed with cout";
@@ -312,7 +312,13 @@ int main(){
     }
 
     */
-    for(int i=0;i<16;i++){
-        cout<<(i)/2;
-    }
+    
+    //FUNCTIONS
+
+
+    
+    return 0;
 }
+
+    
+    

@@ -1,13 +1,9 @@
 #include <iostream>
-#include <array>
 using namespace std;
-int sum(int arr[], int size){
-    int result;
-    for(int i; i < size; i++){
-        result += arr[i];
-    }
-    return result;
-}
+
+//Forward Declaration
+int sum(int arr[], int size);
+
 int main(){
     int arr1[] = {1,2,3,4,5,6};
     int arrSize = size(arr1);
@@ -15,4 +11,10 @@ int main(){
     return 0;
 }
 
-
+int sum(int arr[], int size){
+    int result;
+    for(int i; i < size; i++){
+        result += arr[i];
+    }
+    return result;
+}

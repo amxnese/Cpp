@@ -4,7 +4,7 @@ using namespace std;
 int main(){
     int nums[6] = {42,23,74,23,75};
     // max() Function Returns The Max Value From an Array
-    cout << max({42,23,74,23,75}) <<endl;
+    cout << "max num is: " << max({42,23,74,23,75}) <<endl;
     
     // Implementing The max() Function
     int iter = size(nums);
@@ -13,10 +13,10 @@ int main(){
         if(nums[i] > max_num)
             max_num = nums[i];
     }
-    cout << max_num << endl;
+    cout << "max num is: "<< max_num << endl;
 
     // min() Function Returns The Min Value From an Array
-    cout << min({42,23,74,23,75}) <<endl;
+    cout << "min num is: " << min({42,23,74,23,75}) <<endl;
 
     //Implementig min() Function
     int nums1[6] = {2,1,4,1,4,59};
@@ -26,7 +26,7 @@ int main(){
         if(nums1[n] < minimum)
             minimum = nums1[n];
     }
-    cout << minimum <<endl;
+    cout << "min num is: " << minimum <<endl;
 
     //count() Function Returns How Many Times a Value Has Repeated
 
@@ -37,7 +37,7 @@ int main(){
         if(nums[i] == 23)
             dup++;
     }
-    cout << dup << endl;
+    cout << "num occurance is: " << dup << endl;
 
     return 0;
 }

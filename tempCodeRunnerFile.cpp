@@ -1,0 +1,1 @@
+        result += vect.at(i);

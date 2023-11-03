@@ -11,9 +11,10 @@ int main(){
     return 0;
 }
 
+//Declaration
 int sum(int arr[], int size){
     int result;
-    for(int i; i < size; i++){
+    for(int i = 0; i < size; i++){
         result += arr[i];
     }
     return result;

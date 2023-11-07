@@ -2,6 +2,7 @@
 #include <typeinfo>
 #include <array>
 #include <string.h>
+#include <cmath>
 using namespace std;
 
 int main(){
@@ -310,7 +311,6 @@ int main(){
             break;
         }
     }
-
     */
 
 

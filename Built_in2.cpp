@@ -1,6 +1,8 @@
 #include <iostream>
+#include <string>
 #include <algorithm>
 using namespace std;
+string sliceString (string str ,int start,int end);
 int main(){
     int nums[6] = {42,23,74,23,75};
     // max() Function Returns The Max Value From an Array
@@ -39,5 +41,19 @@ int main(){
     }
     cout << "num occurance is: " << dup << endl;
 
+    //substr(start, end) Creates a Sub String From The Original String  
+    string str = "Hello World"; 
+    string sub_str = str.substr(2, 8);
+    cout << sub_str << endl; // "llo Worl"
+
+    cout << sliceString(str,2,8); // "llo Wor"
     return 0;
 }
+
+    //Implementing substr() Function
+    string sliceString (string str ,int start,int end){
+    string result = "";
+    for(int i = start;i <= end;i++){
+        result += str[i];
+    }return result;
+    }

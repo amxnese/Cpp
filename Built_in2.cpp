@@ -31,6 +31,11 @@ int main(){
     cout << "min num is: " << minimum <<endl;
 
     //count() Function Returns How Many Times a Value Has Repeated
+    string word = "abbccc";
+    char ltr = 'c';
+    int cnt = count(word.cbegin(), word.cend(),ltr);
+    cout << "Letter '" << ltr <<"' Reapeated " << cnt << " Times" << endl;
+
 
     //Implementing count() Function
     int dup = 0;

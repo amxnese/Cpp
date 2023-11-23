@@ -3,6 +3,8 @@
 #include <array>
 #include <string.h>
 #include <cmath>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
 int main(){
@@ -313,6 +315,11 @@ int main(){
     }
     */
 
+    vector<int> vect = {1,5,3,2,6};
+    sort(vect.rend(),vect.rbegin());
+    for(int i : vect){
+        cout << i << " ";
+    }
 
     return 0;
 }
